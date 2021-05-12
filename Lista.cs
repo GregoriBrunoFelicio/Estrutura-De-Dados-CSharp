@@ -5,6 +5,7 @@ namespace Estrutura_De_Dados
     public class Lista
     {
         public Aluno[] alunos = new Aluno[100];
+
         private int totalDeAlunos;
 
         public void Adicionar(Aluno aluno)
@@ -20,10 +21,7 @@ namespace Estrutura_De_Dados
             VerificarEspacoArray();
 
             if (!PosicaoValida(posicao)) throw new IndexOutOfRangeException("Posicão inválida.");
-            for (var i = totalDeAlunos - 1; i >= posicao; i -= 1)
-            {
-                alunos[i + 1] = alunos[i];
-            }
+            for (var i = totalDeAlunos - 1; i >= posicao; i -= 1) alunos[i + 1] = alunos[i];
 
             alunos[posicao] = aluno;
             totalDeAlunos++;
@@ -36,11 +34,7 @@ namespace Estrutura_De_Dados
 
         public void Remover(int posicao)
         {
-            for (var i = posicao; i < totalDeAlunos; i++)
-            {
-                alunos[i] = alunos[i + 1];
-            }
-
+            for (var i = posicao; i < totalDeAlunos; i++) alunos[i] = alunos[i + 1];
             totalDeAlunos--;
         }
 
@@ -63,10 +57,7 @@ namespace Estrutura_De_Dados
         {
             if (totalDeAlunos != alunos.Length) return;
             var novoArray = new Aluno[alunos.Length * 2];
-            for (var i = 0; i < alunos.Length; i++)
-            {
-                novoArray[i] = alunos[i];
-            }
+            for (var i = 0; i < alunos.Length; i++) novoArray[i] = alunos[i];
             alunos = novoArray;
         }
     }
