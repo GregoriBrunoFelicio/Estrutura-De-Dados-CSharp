@@ -14,7 +14,6 @@ namespace Estrutura_De_Dados
             totalDeAlunos++;
         }
 
-        private bool PosicaoValida(int posicao) => posicao >= 0 && posicao <= totalDeAlunos;
 
         public void Adicionar(int posicao, Aluno aluno)
         {
@@ -29,20 +28,6 @@ namespace Estrutura_De_Dados
             alunos[posicao] = aluno;
             totalDeAlunos++;
         }
-
-        private void VerificarEspacoArray()
-        {
-            if (totalDeAlunos != alunos.Length) return;
-            var novoArray = new Aluno[alunos.Length * 2];
-            for (var i = 0; i < alunos.Length; i++)
-            {
-                novoArray[i] = alunos[i];
-            }
-
-            alunos = novoArray;
-        }
-
-        private bool PosicaoOcupada(int posicao) => posicao >= 0 && posicao < totalDeAlunos;
 
         public Aluno Obter(int posicao) =>
             !PosicaoOcupada(posicao) ?
@@ -69,5 +54,20 @@ namespace Estrutura_De_Dados
         }
 
         public int Tamanho() => totalDeAlunos;
+
+        private bool PosicaoValida(int posicao) => posicao >= 0 && posicao <= totalDeAlunos;
+
+        private bool PosicaoOcupada(int posicao) => posicao >= 0 && posicao < totalDeAlunos;
+
+        private void VerificarEspacoArray()
+        {
+            if (totalDeAlunos != alunos.Length) return;
+            var novoArray = new Aluno[alunos.Length * 2];
+            for (var i = 0; i < alunos.Length; i++)
+            {
+                novoArray[i] = alunos[i];
+            }
+            alunos = novoArray;
+        }
     }
 }
