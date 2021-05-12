@@ -13,13 +13,11 @@ namespace Estrutura_De_Dados
             var lista = new Lista();
             lista.Adicionar(aluno1);
             lista.Adicionar(aluno2);
-            lista.Adicionar(0, aluno3);
-
 
             //Console.WriteLine(lista.Tamanho());
             //Console.WriteLine(lista.Contem(aluno1));
             //Console.WriteLine(lista.Obter(0).Nome);
-            lista.Remover(1);
+            //lista.Remover(1);
 
             foreach (var aluno in lista.alunos) Console.WriteLine(aluno != null ? aluno.Nome : "Vazio");
         }
