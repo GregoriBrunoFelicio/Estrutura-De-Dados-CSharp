@@ -1,0 +1,13 @@
+C:\Users\GregoriBrunoFelicio\Desktop\Repositories\Estrutura-De-Dados\bin\Debug\netcoreapp3.1\Estrutura-De-Dados.exe
+C:\Users\GregoriBrunoFelicio\Desktop\Repositories\Estrutura-De-Dados\bin\Debug\netcoreapp3.1\Estrutura-De-Dados.deps.json
+C:\Users\GregoriBrunoFelicio\Desktop\Repositories\Estrutura-De-Dados\bin\Debug\netcoreapp3.1\Estrutura-De-Dados.runtimeconfig.json
+C:\Users\GregoriBrunoFelicio\Desktop\Repositories\Estrutura-De-Dados\bin\Debug\netcoreapp3.1\Estrutura-De-Dados.runtimeconfig.dev.json
+C:\Users\GregoriBrunoFelicio\Desktop\Repositories\Estrutura-De-Dados\bin\Debug\netcoreapp3.1\Estrutura-De-Dados.dll
+C:\Users\GregoriBrunoFelicio\Desktop\Repositories\Estrutura-De-Dados\bin\Debug\netcoreapp3.1\Estrutura-De-Dados.pdb
+C:\Users\GregoriBrunoFelicio\Desktop\Repositories\Estrutura-De-Dados\obj\Debug\netcoreapp3.1\Estrutura-De-Dados.csprojAssemblyReference.cache
+C:\Users\GregoriBrunoFelicio\Desktop\Repositories\Estrutura-De-Dados\obj\Debug\netcoreapp3.1\Estrutura-De-Dados.AssemblyInfoInputs.cache
+C:\Users\GregoriBrunoFelicio\Desktop\Repositories\Estrutura-De-Dados\obj\Debug\netcoreapp3.1\Estrutura-De-Dados.AssemblyInfo.cs
+C:\Users\GregoriBrunoFelicio\Desktop\Repositories\Estrutura-De-Dados\obj\Debug\netcoreapp3.1\Estrutura-De-Dados.csproj.CoreCompileInputs.cache
+C:\Users\GregoriBrunoFelicio\Desktop\Repositories\Estrutura-De-Dados\obj\Debug\netcoreapp3.1\Estrutura-De-Dados.dll
+C:\Users\GregoriBrunoFelicio\Desktop\Repositories\Estrutura-De-Dados\obj\Debug\netcoreapp3.1\Estrutura-De-Dados.pdb
+C:\Users\GregoriBrunoFelicio\Desktop\Repositories\Estrutura-De-Dados\obj\Debug\netcoreapp3.1\Estrutura-De-Dados.genruntimeconfig.cache
