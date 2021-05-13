@@ -6,8 +6,4 @@
     <RootNamespace>Estrutura_De_Dados</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="src\" />
-  </ItemGroup>
-
 </Project>

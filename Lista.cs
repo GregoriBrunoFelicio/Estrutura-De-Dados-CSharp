@@ -6,7 +6,7 @@ namespace Estrutura_De_Dados
     {
         public Aluno[] alunos = new Aluno[100];
 
-        private int totalDeAlunos;
+        private int totalDeAlunos { get; set; }
 
         public void Adicionar(Aluno aluno)
         {
@@ -15,12 +15,11 @@ namespace Estrutura_De_Dados
             totalDeAlunos++;
         }
 
-
         public void Adicionar(int posicao, Aluno aluno)
         {
             VerificarEspacoArray();
 
-            if (!PosicaoValida(posicao)) throw new IndexOutOfRangeException("Posicão inválida.");
+            if (!PosicaoValida(posicao)) throw new ArgumentOutOfRangeException("Posicão inválida.");
             for (var i = totalDeAlunos - 1; i >= posicao; i -= 1) alunos[i + 1] = alunos[i];
 
             alunos[posicao] = aluno;
@@ -29,7 +28,7 @@ namespace Estrutura_De_Dados
 
         public Aluno Obter(int posicao) =>
             !PosicaoOcupada(posicao) ?
-                throw new IndexOutOfRangeException("Posicão inválida.") :
+                throw new ArgumentOutOfRangeException("Posicão inválida.") :
                 alunos[posicao];
 
         public void Remover(int posicao)
