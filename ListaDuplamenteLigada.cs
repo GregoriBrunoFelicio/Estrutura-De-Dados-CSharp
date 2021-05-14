@@ -3,7 +3,7 @@ using System.Text;
 
 namespace Estrutura_De_Dados
 {
-    public class ListaLigada
+    public class ListaDuplamenteLigada
     {
         private Celula Primeira { get; set; }
         private Celula Ultima { get; set; }
@@ -11,14 +11,18 @@ namespace Estrutura_De_Dados
 
         public void AdicionarNoComeco(object elemento)
         {
-            var novaCelula = new Celula(elemento, Primeira);
-            Primeira = novaCelula;
-
             if (TotalDeElementos == 0)
             {
-                Ultima = Primeira;
+                var nova = new Celula(elemento);
+                Primeira = nova;
+                Ultima = nova;
             }
-
+            else
+            {
+                var nova = new Celula(elemento, Primeira);
+                Primeira.Anterior = nova;
+                Primeira = nova;
+            }
             TotalDeElementos++;
         }
 
@@ -29,8 +33,9 @@ namespace Estrutura_De_Dados
                 AdicionarNoComeco(elemento);
             else
             {
-                var nova = new Celula(elemento, null);
+                var nova = new Celula(elemento);
                 Ultima.Proximo = nova;
+                nova.Anterior = Ultima;
                 Ultima = nova;
                 TotalDeElementos++;
             }
@@ -49,8 +54,10 @@ namespace Estrutura_De_Dados
             else
             {
                 var anterior = ObterCelula(posicao - 1);
-                var novaCelula = new Celula(elemento, anterior.Proximo);
-                anterior.Proximo = novaCelula;
+                var proxima = anterior.Proximo;
+                var nova = new Celula(elemento, anterior.Proximo) { Anterior = anterior };
+                anterior.Proximo = nova;
+                proxima.Anterior = nova;
                 TotalDeElementos++;
             }
         }
@@ -81,6 +88,44 @@ namespace Estrutura_De_Dados
             TotalDeElementos--;
 
             if (TotalDeElementos == 0) Ultima = null;
+        }
+
+        public void RemoverDoFim()
+        {
+            if (TotalDeElementos == 1)
+            {
+                RemoverDoComeco();
+            }
+            else
+            {
+                var penultima = Ultima.Anterior;
+                penultima.Proximo = null;
+                Ultima = penultima;
+                TotalDeElementos--;
+            }
+        }
+
+        public void Remover(int posicao)
+        {
+            if (TotalDeElementos == 0)
+            {
+                RemoverDoComeco();
+            }
+            else if (posicao == TotalDeElementos - 1)
+            {
+                RemoverDoFim();
+            }
+            else
+            {
+                var anterior = ObterCelula(posicao - 1);
+                var atual = anterior.Proximo;
+                var proximo = atual.Proximo;
+
+                anterior.Proximo = proximo;
+                proximo.Anterior = anterior;
+
+                TotalDeElementos--;
+            }
         }
 
         public int Tamanho() => TotalDeElementos;
